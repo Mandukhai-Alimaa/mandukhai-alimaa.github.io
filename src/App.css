@@ -205,10 +205,12 @@ body {
 }
 
 .card-image {
-  width: 100%; /* Full width of the card */
-  height: auto; /* Maintain aspect ratio */
-  transition: transform 0.3s ease;
+  width: 100%; /* Ensures the image spans the width of the container */
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  display: block; /* Avoids gaps under the image caused by inline-block elements */
 }
+
 
 .card:hover .image-container .card-image {
   transform: scale(1.2);

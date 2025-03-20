@@ -6,7 +6,7 @@ function Footer() {
             <div className="footer-content">
                 <div className="contact-info">
                     <h2 id="contact-me-text">Contact Info</h2>
-                    <p>Email: mandukhaialimaa@gmail.com</p>
+                    <p>Email: alimaa@wisc.edu</p>
                     <p>Phone: (507) 703-2395</p>
                 </div>
                 <div className="social-links">

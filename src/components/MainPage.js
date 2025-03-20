@@ -21,7 +21,7 @@ function MainPage() {
             <div id="resume-section" className="resume-banner">
                 <h1 class="resume-text-in-banner">Resume</h1>
                 <a 
-                    href={`${process.env.PUBLIC_URL}/MandukhaiAlimaaResume.pdf`} 
+                    href={`${process.env.PUBLIC_URL}/Mandy_Alimaa_master's_student_with_full_stack_exp.pdf`} 
                     download 
                     className="resume-button"
                 >

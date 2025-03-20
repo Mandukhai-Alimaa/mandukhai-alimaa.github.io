@@ -1,6 +1,21 @@
 
 const coursesData = [
     {
+        courseName: "CSS 744: BIG DATA SYSTEMS",
+        courseDescription: "Issues in the design and implementation of big data processing systems, including: an overview of cluster architecture, key design goals (flexibility, performance and fault tolerance), popular execution frameworks, basic abstractions, and applications (e.g., batch analytics, stream processing, graph processing, and machine learning).",
+        logoSrc: `${process.env.PUBLIC_URL}/UWMadison-logo.jpg`,
+    },
+    {
+        courseName: "CSS 774: DATA EXPLORATION, CLEANING, AND INTEGRATION FOR DATA SCIENCE",
+        courseDescription: "Big Data is often said to deal with four Vs: volume, velocity, variety, and veracity. The focus is on variety and veracity challenges, which often arise in data science projects. In many such projects, data is often incorrect, hard to understand, and come from a variety of sources. Data scientists often spend 80% of their effort to explore, clean, and integrate this data, before analysis can be carried out to extract insights. As a result, managing variety and veracity has received significant attention. Study these topics, understand their challenges, and discuss solutions. These solutions often require data management, machine learning, big data scaling, cloud, crowdsourcing, and user interaction techniques.",
+        logoSrc: `${process.env.PUBLIC_URL}/UWMadison-logo.jpg`,
+    },
+    {
+        courseName: "CSS 640: INTRODUCTION TO COMPUTER NETWORKS",
+        courseDescription: "Architecture of computer networks and network protocols, protocol layering, reliable transmission, congestion control, flow control, naming and addressing, unicast and multicast routing, network security, network performance widely used protocols such as Ethernet, wireless LANs, IP, TCP, and HTTP.",
+        logoSrc: `${process.env.PUBLIC_URL}/UWMadison-logo.jpg`,
+    },
+    {
         courseName: "CSS 537: INTRODUCTION TO OPERATING SYSTEMS",
         courseDescription: "Input-output hardware, interrupt handling, properties of magnetic tapes, discs and drums, associative memories and virtual address translation techniques. Batch processing, time sharing and real-time systems, scheduling resource allocation, modular software systems, performance measurement and system evaluation.",
         logoSrc: `${process.env.PUBLIC_URL}/UWMadison-logo.jpg`,

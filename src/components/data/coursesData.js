@@ -6,7 +6,7 @@ const coursesData = [
         logoSrc: `${process.env.PUBLIC_URL}/UWMadison-logo.jpg`,
     },
     {
-        courseName: "CSS 774: DATA EXPLORATION, CLEANING, AND INTEGRATION FOR DATA SCIENCE",
+        courseName: "CSS 774: DATA EXPLORATION, INTEGRATION FOR DATA SCIENCE",
         courseDescription: "Big Data is often said to deal with four Vs: volume, velocity, variety, and veracity. The focus is on variety and veracity challenges, which often arise in data science projects. In many such projects, data is often incorrect, hard to understand, and come from a variety of sources. Data scientists often spend 80% of their effort to explore, clean, and integrate this data, before analysis can be carried out to extract insights. As a result, managing variety and veracity has received significant attention. Study these topics, understand their challenges, and discuss solutions. These solutions often require data management, machine learning, big data scaling, cloud, crowdsourcing, and user interaction techniques.",
         logoSrc: `${process.env.PUBLIC_URL}/UWMadison-logo.jpg`,
     },

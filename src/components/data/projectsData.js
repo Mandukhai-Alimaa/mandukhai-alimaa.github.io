@@ -36,6 +36,25 @@ const projectsData = [
         overlayText: "Disk-Based Vector Search in Quake (GitHub)",
         paragraph: "This project aims to modify Quake, a partition-based vector indexing system, to support disk-based vector search for large-scale datasets. Currently, Quake stores all partitions in memory, limiting its scalability. We are working on storing vector partitions on disk while maintaining Quake’s existing API for seamless integration. Additionally, a hybrid caching strategy will be implemented to store frequently accessed data in DRAM, reducing query latency and improving performance. This approach will make Quake more scalable and cost-efficient for handling large datasets in real-world applications"
     },
+    {
+        key: 7,
+        imageSrc: `${process.env.PUBLIC_URL}/pyarrow.png`,
+        overlayText: "Thread-Safe Analytics Server",
+        paragraph: "Designed and implemented a multithreaded analytics server in Python using gRPC and PyArrow to handle high-volume CSV uploads and convert them to Parquet. Enabled concurrent RPC file aggregation, used columnar reads for 60x faster performance, and ensured thread safety with fine-grained locking."
+    },
+    {
+        key: 8,
+        imageSrc: `${process.env.PUBLIC_URL}/spark.png`,
+        overlayText: "Loan Analytics with Spark",
+        paragraph: "Built a scalable loan approval prediction pipeline using a containerized Spark cluster with PySpark, Hive, and HDFS. Used RDD, DataFrame, and SQL interfaces to process relational data and extract insights in a distributed environment."
+    },
+    {
+        key: 9,
+        imageSrc: `${process.env.PUBLIC_URL}/hdfs.png`,
+        overlayText: "HDFS Fault-Tolerant Analytics",
+        paragraph: "Deployed a multi-node HDFS cluster using Docker Compose to support distributed Parquet storage. Developed a PyArrow-based pipeline for selective column reads directly from HDFS and simulated node failures to validate system resilience and read efficiency."
+    }
+    
 ];
 
 export default projectsData;

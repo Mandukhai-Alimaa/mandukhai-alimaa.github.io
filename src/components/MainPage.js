@@ -13,10 +13,10 @@ function MainPage() {
                 Mandukhai Alimaa
             </div>
             <div >
-                <img src={`${process.env.PUBLIC_URL}/myPhoto.png`} alt="Mandukhai Alimaa's professional portrait" class="round-image"/>
+                <img src={`${process.env.PUBLIC_URL}/chibi2.png`} alt="Mandukhai Alimaa's professional portrait" class="round-image"/>
             </div>
             <div class="text-below-round-img">
-                Full-Stack Developer and Master's student focused on impactful software solutions.
+                Master's student passionate about building scalable software systems.
             </div>
             <div id="resume-section" className="resume-banner">
                 <h1 class="resume-text-in-banner">Resume</h1>

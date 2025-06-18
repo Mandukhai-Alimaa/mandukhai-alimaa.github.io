@@ -4,8 +4,12 @@ import App from './App';
 test('theme toggle button exists and changes theme', () => {
   render(<App />);
   
-  // Check if theme toggle button is present
-  const themeToggle = screen.getByTitle(/switch to/i);
+  // Check if theme toggle button is present (get all buttons and find the visible one)
+  const themeToggleButtons = screen.getAllByTitle(/switch to/i);
+  const themeToggle = themeToggleButtons.find(button => 
+    window.getComputedStyle(button).display !== 'none'
+  ) || themeToggleButtons[0]; // fallback to first if none are hidden
+  
   expect(themeToggle).toBeInTheDocument();
   
   // Check initial state is day theme
@@ -28,7 +32,11 @@ test('theme toggle button exists and changes theme', () => {
 test('theme toggle button shows correct icons for day and night', () => {
   render(<App />);
   
-  const themeToggle = screen.getByTitle(/switch to/i);
+  // Get all theme toggle buttons and find the visible one
+  const themeToggleButtons = screen.getAllByTitle(/switch to/i);
+  const themeToggle = themeToggleButtons.find(button => 
+    window.getComputedStyle(button).display !== 'none'
+  ) || themeToggleButtons[0]; // fallback to first if none are hidden
   
   // Should show moon icon for day mode (to switch to night)
   expect(themeToggle).toHaveTextContent('🌙');

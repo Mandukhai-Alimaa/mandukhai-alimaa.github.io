@@ -15,7 +15,7 @@ function Header() {
                 <h1>Mandukhai Alimaa</h1>
             </div>
             <div className="header-controls">
-                <button className="theme-toggle" onClick={toggleTheme} title={`Switch to ${theme === 'day' ? 'night' : 'day'} mode`}>
+                <button className="theme-toggle theme-toggle-mobile" onClick={toggleTheme} title={`Switch to ${theme === 'day' ? 'night' : 'day'} mode`}>
                     {theme === 'day' ? '🌙' : '☀️'}
                 </button>
                 <button className="menu-toggle" onClick={toggleMenu}>
@@ -28,7 +28,12 @@ function Header() {
             </div>
             <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
                 <ul className="nav-links">
-                    <li><a href="#resume-section">Resume</a></li>
+                    <li>
+                        <a href="#resume-section">Resume</a>
+                        <button className="theme-toggle theme-toggle-desktop" onClick={toggleTheme} title={`Switch to ${theme === 'day' ? 'night' : 'day'} mode`}>
+                            {theme === 'day' ? '🌙' : '☀️'}
+                        </button>
+                    </li>
                     <li><a href="#project-section">Projects</a></li>
                     <li><a href="#course-section">Course Work</a></li>
                     <li><a href="#recommendation-section">Recommendation Letters</a></li>

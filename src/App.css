@@ -40,6 +40,16 @@ html {
 
 .nav-links li {
   margin-left: 20px; /* Space between items */
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle-desktop {
+  margin-right: 10px;
+}
+
+.theme-toggle-mobile {
+  display: none;
 }
 
 .nav-links a {
@@ -522,4 +532,169 @@ body {
 
 }
 
+/* Theme Toggle Button Styles */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Day Theme (Default) */
+.day-theme {
+  --bg-color: #eee;
+  --bg-pattern: url("https://www.transparenttextures.com/patterns/cubes.png");
+  --text-color: #333;
+  --card-bg: #fff;
+  --card-border: #ddd;
+  --section-bg: #DDD;
+  --footer-bg: #333;
+  --footer-text: white;
+  --header-bg: #333;
+  --header-text: white;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Night Theme */
+.night-theme {
+  --bg-color: #1a1a1a;
+  --bg-pattern: url("https://www.transparenttextures.com/patterns/cubes.png");
+  --text-color: #e0e0e0;
+  --card-bg: #2d2d2d;
+  --card-border: #444;
+  --section-bg: #2a2a2a;
+  --footer-bg: #111;
+  --footer-text: #e0e0e0;
+  --header-bg: #111;
+  --header-text: #e0e0e0;
+  --shadow-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Apply theme variables */
+.day-theme {
+  background: var(--bg-color);
+  background-image: var(--bg-pattern);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+.night-theme {
+  background: var(--bg-color);
+  background-image: var(--bg-pattern);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+.day-theme .header,
+.night-theme .header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+}
+
+.day-theme .text-above-round-img,
+.day-theme .text-below-round-img,
+.night-theme .text-above-round-img,
+.night-theme .text-below-round-img {
+  color: var(--text-color);
+}
+
+.day-theme .resume-banner,
+.night-theme .resume-banner {
+  background-color: var(--section-bg);
+  color: var(--text-color);
+}
+
+.day-theme .card,
+.night-theme .card {
+  background-color: var(--card-bg);
+  border-color: var(--card-border);
+  box-shadow: 2px 10px 10px var(--shadow-color);
+  color: var(--text-color);
+}
+
+.day-theme .footer-banner,
+.night-theme .footer-banner {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+}
+
+.day-theme .section-header,
+.night-theme .section-header {
+  color: var(--text-color);
+}
+
+.day-theme .courses-container,
+.night-theme .courses-container {
+  color: var(--text-color);
+}
+
+.day-theme .course-name,
+.night-theme .course-name {
+  color: var(--text-color);
+}
+
+.day-theme .course-description,
+.night-theme .course-description {
+  color: var(--text-color);
+}
+
+.day-theme .line,
+.night-theme .line {
+  background-color: var(--text-color);
+}
+
+.day-theme .carousel-button,
+.night-theme .carousel-button {
+  color: var(--text-color);
+}
+
+.day-theme .carousel-button:hover,
+.night-theme .carousel-button:hover {
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.day-theme .card-paragraph,
+.night-theme .card-paragraph {
+  color: var(--text-color);
+}
+
+/* Responsive adjustments for theme toggle */
+@media (max-width: 810px) {
+  .header-controls {
+    gap: 10px;
+  }
+  
+  .theme-toggle {
+    font-size: 1.3rem;
+  }
+
+  .theme-toggle-mobile {
+    display: block;
+  }
+
+  .theme-toggle-desktop {
+    display: none;
+  }
+
+  .nav-links li {
+    flex-direction: column;
+    align-items: center;
+  }
+}

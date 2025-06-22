@@ -29,10 +29,10 @@ function Header() {
             <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
                 <ul className="nav-links">
                     <li>
-                        <a href="#resume-section">Resume</a>
                         <button className="theme-toggle theme-toggle-desktop" onClick={toggleTheme} title={`Switch to ${theme === 'day' ? 'night' : 'day'} mode`}>
                             {theme === 'day' ? '🌙' : '☀️'}
                         </button>
+                        <a href="#resume-section">Resume</a>
                     </li>
                     <li><a href="#project-section">Projects</a></li>
                     <li><a href="#course-section">Course Work</a></li>

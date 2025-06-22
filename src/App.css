@@ -659,6 +659,22 @@ body {
   background-color: var(--text-color);
 }
 
+.day-theme .carousel-button,
+.night-theme .carousel-button {
+  color: var(--text-color);
+}
+
+.day-theme .carousel-button:hover,
+.night-theme .carousel-button:hover {
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.day-theme .card-paragraph,
+.night-theme .card-paragraph {
+  color: var(--text-color);
+}
+
 /* Responsive adjustments for theme toggle */
 @media (max-width: 810px) {
   .header-controls {

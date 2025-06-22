@@ -8,18 +8,18 @@ import recommendationData from './data/recommendationData.js';
 
 function MainPage() {
     return (
-        <div class="main-content">
-            <div class="text-above-round-img">
+        <div className="main-content">
+            <div className="text-above-round-img">
                 Mandukhai Alimaa
             </div>
             <div >
-                <img src={`${process.env.PUBLIC_URL}/chibi2.png`} alt="Mandukhai Alimaa's professional portrait" class="round-image"/>
+                <img src={`${process.env.PUBLIC_URL}/chibi2.png`} alt="Mandukhai Alimaa's professional portrait" className="round-image"/>
             </div>
-            <div class="text-below-round-img">
+            <div className="text-below-round-img">
                 Master's student passionate about building scalable software systems.
             </div>
             <div id="resume-section" className="resume-banner">
-                <h1 class="resume-text-in-banner">Resume</h1>
+                <h1 className="resume-text-in-banner">Resume</h1>
                 <a 
                     href={`${process.env.PUBLIC_URL}/Mandy_Alimaa_master's_student_with_full_stack_exp.pdf`} 
                     download 
@@ -28,12 +28,13 @@ function MainPage() {
                     Download
                 </a>
             </div>
-            <div id="project-section" class="projects-section">
-                <h1 class="section-header">Projects</h1>
-                <div class="projects-card">
-                    {projectsData.map((projectItem) => {
+            <div id="project-section" className="projects-section">
+                <h1 className="section-header">Projects</h1>
+                <div className="projects-card">
+                    {projectsData.map((projectItem, index) => {
                         return (
                             <Card
+                                key={index}
                                 imageSrc={projectItem.imageSrc}
                                 overlayText={projectItem.overlayText}
                                 paragraph={projectItem.paragraph}
@@ -45,9 +46,10 @@ function MainPage() {
             <div id="course-section" className="course-work-section">
                 <h1 className="section-header">Course Work</h1>
                 <div className="courses-container">
-                    {coursesData.map((courseItem) => {
+                    {coursesData.map((courseItem, index) => {
                         return (
                             <Course
+                                key={index}
                                 courseName={courseItem.courseName}
                                 description={courseItem.courseDescription}
                                 logoSrc={courseItem.logoSrc}
